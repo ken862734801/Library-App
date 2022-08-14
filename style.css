@@ -81,11 +81,11 @@ button:hover{
     width:90%;
     height:auto;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-evenly;
     padding:12px 0;
 }
 .card{
-    max-width:325px;
+    max-width:350px;
     border:none;
     border-radius:4px;
     padding:24px;
