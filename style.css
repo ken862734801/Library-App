@@ -18,6 +18,7 @@ header{
     padding:12px 0;
     color:var(--secondary-color);
 }
+
 .banner{
     display:flex;
     width:90%;
@@ -59,12 +60,12 @@ button:hover{
 }
 .image-container{
     width:35%;
-    min-width:180px;
+    min-width:220px;
 }
 .image-container>img{
     max-width: 550px;
     width:100%;
-    min-width:180px;
+    min-width:220px;
 }
 .section-title{
     width:90%;
@@ -179,7 +180,7 @@ button:hover{
     transition:0.4s;
 }
 input:checked + .slider{
-    background-color:#43b556;;
+    background-color:#43b556;
 }
 input:focus + .slider{
     box-shadow: 0 0 1px #43b556;;
@@ -207,37 +208,54 @@ input:checked + .slider:before{
     background-color: rgba(0,0,0,0.4);
 }
 .modal-container{
-    background-color: #fefefe;
+    background-color: var(--main-color);
     margin: 15% auto;
-    padding:20px;
+    padding:30px;
     border-radius:8px;
     width:20%;
-    max-width:275px;
-    min-width:200px;
+    max-width:295px;
+    min-width:270px;
     display:flex;
     flex-direction: column;
 }
 .modal-header{
     display: flex;
     justify-content: flex-end;
-    font-size:28px;
+    font-size:22px;
     font-weight:bold;
+}
+.close{
+    margin-top:-20px;
+    margin-right:-10px;
+}
+.modal-message{
+    color:var(--secondary-color);
+    font-weight:bold;
+    font-size:1.40em;
+    margin: 0 auto;
+    margin-bottom:10px;
+    margin-top:10px;
 }
 .close:hover, .close:focus{
     cursor:pointer;
+    color:rgb(68, 68, 68);
+    transition: 0.3s;
 }
 form{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:10px;
+    gap:20px;
     padding: 10px;
   }
 input[type=text], input[type=number],
 input[type=submit] {
     width:100%;
     font-size:1.15em;
+    border-radius:8px;
+    padding:8px;
+    border:none;
   }
   form > div {
       display:flex;
@@ -247,6 +265,17 @@ input[type=submit] {
       gap:5px;
       font-size:1.15em;
   }
+input[type=submit]{
+    background-color: var(--secondary-color);
+    border:none;
+    border-radius:8px;
+    padding:8px;
+    color:white;
+}
+input[type=submit]:hover{
+    cursor: pointer;
+    background-color:#646eb1;
+}
 
 @media screen and (max-width:600px){
     .text-container{
@@ -261,18 +290,18 @@ input[type=submit] {
         z-index:1;
     }
     .banner-subtitle{
-        width:220px;
+        width:200px;
         margin-left:-25px;
         z-index:1;
     }
     .text-container > h3{
-        font-size: 1.15em;
+        font-size: 1.20em;
     }
     .text-container > p{
-        font-size:0.90em;
+        font-size:0.93em;
     }
     .text-container > button{
-        font-size:0.80em;
+        font-size:0.85em;
         margin-bottom:10px;
         width:80px;
         margin-left:-25px;
@@ -286,7 +315,7 @@ input[type=submit] {
     }
   }
 
- @media screen and (max-width:420px){
+  @media screen and (max-width:420px){
     .text-container{
         min-width:180px;
     }
@@ -308,5 +337,11 @@ input[type=submit] {
         width:180px;
         margin-left:-25px;
         z-index:1;
+    }
+    .card{
+        width:315px;
+    }
+    .card-title, .card-author, .card-pages, .card-status{
+        margin-bottom:4px;
     }
   }
