@@ -92,6 +92,7 @@ button:hover{
     margin:12px;
     border-top: 4px solid var(--tertiary-color);
     background-color: white;
+    box-shadow: 4px 4px 4px rgb(148, 122, 119);
 }
 .card-status.complete{
     max-width:100px;
@@ -285,9 +286,15 @@ input[type=submit] {
     }
   }
 
-  @media screen and (max-width:420px){
+ @media screen and (max-width:420px){
     .text-container{
         min-width:180px;
+    }
+    .image-container{
+        min-width:190px;
+    }
+    .image-container > img{
+        min-width:190px;
     }
     .banner{
         padding:20px 0;
