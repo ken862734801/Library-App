@@ -1,305 +1,121 @@
-:root{
-    --main-color:#fceeec;
-    --secondary-color:#505991;
-    --tertiary-color:#c49d9b;
-}
-*{
-    margin: 0;
-    box-sizing: border-box;
-    color:var(--font-color);
-    font-family: Arial, Helvetica, sans-serif;
-}
-body{
-    min-height:100vh;
-}
-header{
-    width:90%;
-    margin:0 auto;
-    padding:12px 0;
-    color:var(--secondary-color);
-}
-.banner{
-    display:flex;
-    width:90%;
-    margin: 0 auto;
-    border-radius:8px;
-    background-color: var(--main-color);
-    padding:8px;
-}
-.text-container > button{
-    max-width:100px;
-    background-color: var(--secondary-color);
-    color:white;
-    border:none;
-    font-size:1.05em;
-    font-weight: 500;
-    border-radius:8px;
-    padding:6px;
-}
-button:hover{
-    cursor:pointer;
-    background-color:#646eb1;
-}
-.text-container > h3{
-    color:var(--secondary-color);
-    font-size:1.70em;
-    margin-bottom:5px;
-}
-.text-container > p{
-    color:var(--tertiary-color);
-    font-size:1.15em;
-    margin-bottom:10px;
-}
-.text-container{
-    width:65%;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left:40px;
-}
-.image-container{
-    width:35%;
-    min-width:180px;
-}
-.image-container>img{
-    max-width: 550px;
-    width:100%;
-    min-width:180px;
-}
-.section-title{
-    width:90%;
-    margin: 0 auto;
-    padding:16px 0;
-    font-size:1.05em;
-    color:var(--secondary-color);
-}
-.container{
-    display:flex;
-    flex-wrap: wrap;
-    background-color: var(--main-color);
-    border-radius:8px;
-    width:90%;
-    height:auto;
-    margin: 0 auto;
-    justify-content: center;
-    padding:12px 0;
-}
-.card{
-    max-width:325px;
-    border:none;
-    border-radius:4px;
-    padding:24px;
-    margin:8px;
-    border-top: 4px solid var(--tertiary-color);
-    background-color: white;
-}
-.card-status.complete{
-    max-width:100px;
-    padding:4px;
-    color:rgb(69, 121, 69);
-    background-color: rgba(202, 228, 202, 0.808);
-    border-radius:8px;
-    font-size:0.80em;
-    font-weight:bold;
-    text-align:center;
-    margin-bottom:10px;
-}
-.card-status.not-complete{
-    max-width:100px;
-    padding:4px;
-    color:rgb(121, 69, 69);
-    background-color: rgba(228, 202, 202, 0.808);
-    border-radius:8px;
-    font-size:0.80em;
-    font-weight:bold;
-    text-align:center;
-    margin-bottom:10px;
-}
-.card-header{
-    display: flex;
-    justify-content: flex-end;
-    font-size:1.25em;
-    font-weight:bold;
-    margin-top:-8px;
-}
-.trash:hover, .trash:focus{
-    cursor:pointer;
-    color:rgb(68, 68, 68);
-    transition: 0.3s;
-}
-.card-title{
-    font-weight: bold;
-    margin:8px 0;
-}
-.card-author{
-    margin-bottom:8px;
-}
-.card-pages{
-    margin-bottom:8px;
-}
-.card-button{
-    margin-bottom:8px;
-    padding-right:15px;
-    display:flex;
-    justify-content: flex-end;
-}
-.switch{
-    position:relative;
-    display:inline-block;
-    width:39px;
-    height:19px;
-    margin-left:8px;
-}
-.switch input{
-    opacity:0;
-    width:0;
-    height:0;
-}
-.slider{
-    position:absolute;
-    cursor:pointer;
-    top:-0.5px;
-    left:0.5px;
-    right:-6.5px;
-    bottom:0;
-    background-color: #ccc;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-}
-.slider:before{
-    position:absolute;
-    content:"";
-    height:18px;
-    width:18px;
-    left:0;
-    top:0;
-    background-color:white;
-    -webkit-transition:0.4s;
-    transition:0.4s;
-}
-input:checked + .slider{
-    background-color:#2196F3;
-}
-input:focus + .slider{
-    box-shadow: 0 0 1px #2196F3;
-}
-input:checked + .slider:before{
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
-.slider.round{
-    border-radius:34px;
-}
-.slider.round:before{
-    border-radius:50%;
-}
-.modal{
-    display:none;
-    position: fixed;
-    z-index:1;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    overflow:auto;
-    background-color: rgba(0,0,0,0.4);
-}
-.modal-container{
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding:20px;
-    border-radius:8px;
-    width:20%;
-    max-width:275px;
-    min-width:200px;
-    display:flex;
-    flex-direction: column;
-}
-.modal-header{
-    display: flex;
-    justify-content: flex-end;
-    font-size:28px;
-    font-weight:bold;
-}
-.close:hover, .close:focus{
-    cursor:pointer;
-}
-form{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:10px;
-    padding: 10px;
-  }
-input[type=text], input[type=number],
-input[type=submit] {
-    width:100%;
-    font-size:1.15em;
-  }
-  form > div {
-      display:flex;
-      justify-content: center;
-      width:100%;
-      margin: 0 auto;
-      gap:5px;
-      font-size:1.15em;
-  }
-
-@media screen and (max-width:600px){
-    .text-container{
-        min-width:180px;
-    }
-    .banner{
-        padding:20px 0;
-    }
-    .banner-title{
-        width:180px;
-        margin-left:-25px;
-        z-index:1;
-    }
-    .banner-subtitle{
-        width:220px;
-        margin-left:-25px;
-        z-index:1;
-    }
-    .text-container > h3{
-        font-size: 1.15em;
-    }
-    .text-container > p{
-        font-size:0.90em;
-    }
-    .text-container > button{
-        font-size:0.80em;
-        margin-bottom:10px;
-        width:80px;
-        margin-left:-25px;
-    }
-    .image-container{
-        display:flex;
-        align-items: center;
-    }
-    .card{
-        padding:16px;
-    }
-  }
-
-  @media screen and (max-width:420px){
-    .text-container{
-        min-width:180px;
-    }
-    .banner{
-        padding:20px 0;
-    }
-    .banner-title{
-        width:180px;
-        margin-left:-25px;
-        z-index:1;
-    }
-    .banner-subtitle{
-        width:180px;
-        margin-left:-25px;
-        z-index:1;
-    }
-  }
+<!DOCTYPE html>
+<html>
+    <head>
+    <link href="style.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <script src="https://kit.fontawesome.com/178167676b.js" crossorigin="anonymous"></script>
+    <title>Library</title>
+    </head>
+    <body>
+        <header>
+            <h1>Bookmark</h1>
+        </header>
+        <div class="banner">
+            <div class="text-container">
+                <h3 class="banner-title">Build your library</h3>
+                <p class="banner-subtitle">Create your own personalized bookshelf of books you have read or plan to read. </p>
+                <button id="addBtn">Add book</button>
+            </div>
+            <div class="image-container">
+                <img src="./images/girlreading.png">
+            </div>
+        </div>
+        <div class="section-title">
+            <h3>Bookshelf</h3>
+        </div>
+        
+        <div class="container">
+            <div class="card">
+                <div class="card-header" id="card-header">
+                    <span class="trash" id="trash">&times;</span>
+                </div>
+                <div class="card-status complete">
+                    <p>Completed</p>
+                </div>
+                <div class="card-title" id="card-title">Harry Potter and the Philosopher's Stone</div>
+                <div class="card-author" id="card-author">Written by J.K. Rowling</div>
+                <div class="card-pages" id="card-pages">223 Pages</div>
+                <div class="card-button" id="card-button">
+                    <p>Read:</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="card-header">
+                    <span class="trash" id="trash">&times;</span>
+                </div>
+                <div class="card-status not-complete">
+                    <p>Not Complete</p>
+                </div>
+                <div class="card-title" id="card-title">Harry Potter and the Philosopher's Stone</div>
+                <div class="card-author" id="card-author">Written by J.K. Rowling</div>
+                <div class="card-pages" id="card-pages">223 Pages</div>
+                <div class="card-button" id="card-button">
+                    <p>Read:</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="card-header">
+                    <span class="trash" id="trash">&times;</span>
+                </div>
+                <div class="card-status not-complete">
+                    <p>Not Complete</p>
+                </div>
+                <div class="card-title" id="card-title">Harry Potter and the Philosopher's Stone</div>
+                <div class="card-author" id="card-author">Written by J.K. Rowling</div>
+                <div class="card-pages" id="card-pages">223 Pages</div>
+                <div class="card-button" id="card-button">
+                    <p>Read:</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="card-header">
+                    <span class="trash" id="trash">&times;</span>
+                </div>
+                <div class="card-status complete">
+                    <p>Complete</p>
+                </div>
+                <div class="card-title" id="card-title">Harry Potter and the Philosopher's Stone</div>
+                <div class="card-author" id="card-author">Written by J.K. Rowling</div>
+                <div class="card-pages" id="card-pages">223 Pages</div>
+                <div class="card-button" id="card-button">
+                    <p>Read:</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+       <div class="modal" id="modal">
+           <div class="modal-container">
+               <div class="modal-header">
+                    <span class="close" id="close">&times;</span>
+               </div>
+               <form>
+                   <input type="text" id="bookTitle" placeholder="Title">
+                   <input type="text" id="bookAuthor" placeholder="Author">
+                   <input type="number" id="bookPages" placeholder="Pages">
+                    <div>
+                        <label for ="bookStatus">Have you read it?</label>
+                        <input type="checkbox" id="bookStatus">
+                    </div>
+                    <input type="submit" id="submitBtn" placeholder="Submit">
+               </form>
+           </div>
+       </div>
+    </body>
+    <script src="script.js"></script>
+    </html>
