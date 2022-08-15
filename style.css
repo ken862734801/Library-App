@@ -311,7 +311,8 @@ input[type=submit]:hover{
         align-items: center;
     }
     .card{
-        padding:16px;
+        width:285px;
+        padding:14px;
     }
   }
 
@@ -339,7 +340,8 @@ input[type=submit]:hover{
         z-index:1;
     }
     .card{
-        width:315px;
+        width:275px;
+        padding:14px;
     }
     .card-title, .card-author, .card-pages, .card-status{
         margin-bottom:4px;
