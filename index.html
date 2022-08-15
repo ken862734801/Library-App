@@ -24,13 +24,13 @@
             <h3>Bookshelf</h3>
         </div>
         
-        <div class="container">
+        <div class="container" id="container">
             <div class="card">
                 <div class="card-header" id="card-header">
                     <span class="trash" id="trash">&times;</span>
                 </div>
                 <div class="card-status complete">
-                    <p>Finished</p>
+                    <p>Completed</p>
                 </div>
                 <div class="card-title" id="card-title">Harry Potter and the Philosopher's Stone</div>
                 <div class="card-author" id="card-author">Written by J.K. Rowling</div>
@@ -38,7 +38,7 @@
                 <div class="card-button" id="card-button">
                     <p>Read:</p>
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" name="toggleSwitch">
                         <span class="slider round"></span>
                     </label>
                 </div>
@@ -50,27 +50,9 @@
                 <div class="card-status not-complete">
                     <p>Not Finished</p>
                 </div>
-                <div class="card-title" id="card-title">Harry Potter and the Philosopher's Stone</div>
-                <div class="card-author" id="card-author">Written by J.K. Rowling</div>
-                <div class="card-pages" id="card-pages">223 Pages</div>
-                <div class="card-button" id="card-button">
-                    <p>Read:</p>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="card-header">
-                    <span class="trash" id="trash">&times;</span>
-                </div>
-                <div class="card-status not-complete">
-                    <p>Not Finished</p>
-                </div>
-                <div class="card-title" id="card-title">Harry Potter and the Philosopher's Stone</div>
-                <div class="card-author" id="card-author">Written by J.K. Rowling</div>
-                <div class="card-pages" id="card-pages">223 Pages</div>
+                <div class="card-title" id="card-title">Of Mice and Men</div>
+                <div class="card-author" id="card-author">Written by John Steinback</div>
+                <div class="card-pages" id="card-pages">107 Pages</div>
                 <div class="card-button" id="card-button">
                     <p>Read:</p>
                     <label class="switch">
@@ -84,15 +66,15 @@
                     <span class="trash" id="trash">&times;</span>
                 </div>
                 <div class="card-status complete">
-                    <p>Finished</p>
+                    <p>Completed</p>
                 </div>
-                <div class="card-title" id="card-title">Harry Potter and the Philosopher's Stone</div>
-                <div class="card-author" id="card-author">Written by J.K. Rowling</div>
-                <div class="card-pages" id="card-pages">223 Pages</div>
+                <div class="card-title" id="card-title">The Outsiders</div>
+                <div class="card-author" id="card-author">Written by S.E. Hinton</div>
+                <div class="card-pages" id="card-pages">192 pages</div>
                 <div class="card-button" id="card-button">
                     <p>Read:</p>
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" name="toggleSwitch">
                         <span class="slider round"></span>
                     </label>
                 </div>
@@ -108,9 +90,9 @@
                    <p>Add new book</p>
                </div>
                <form>
-                   <input type="text" id="bookTitle" placeholder="Title">
-                   <input type="text" id="bookAuthor" placeholder="Author">
-                   <input type="number" id="bookPages" placeholder="Pages">
+                   <input type="text" id="bookTitle" placeholder="Title" required="required">
+                   <input type="text" id="bookAuthor" placeholder="Author" required="required">
+                   <input type="number" id="bookPages" placeholder="Pages" required="required">
                     <div>
                         <label for ="bookStatus">Have you read it?</label>
                         <input type="checkbox" id="bookStatus">
@@ -120,5 +102,5 @@
            </div>
        </div>
     </body>
-    <script src="script.js"></script>
+    <script src="practice.js"></script>
     </html>
