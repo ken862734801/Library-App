@@ -16,14 +16,24 @@ function Book(title, author, pages, read){
 //Example book information. 
 const defaultBook = new Book(
     "Harry Potter and the Philosopher's Stone",
-    "J.K. Rowling", "223", "Not Read"
+    "J.K. Rowling", "223", "Read"
 );
+const defaultBook2 = new Book(
+    "Of Mice and Men",
+    "John Steinbeck", "107", "Not Read"
+)
+const defaultBook3 = new Book(
+    "The Outsiders",
+    "S.E. Hinton", "192", "Read"
+)
 
-function addDefaultBookToLibrary(){
+function addDefaultBooksToLibrary(){
     myLibrary.push(defaultBook);
+    myLibrary.push(defaultBook2);
+    myLibrary.push(defaultBook3);
     console.log(myLibrary);
 }
-document.addEventListener("DOMContentLoaded", addDefaultBookToLibrary);
+document.addEventListener("DOMContentLoaded", addDefaultBooksToLibrary);
 
 //Input variables.
 const title = document.getElementById("bookTitle");
@@ -53,7 +63,7 @@ function addNewBookToLibrary(){
     newBook = new Book(title.value, author.value, pages.value, read);
 
     myLibrary.push(newBook);
-    console.log(myLibrary.length);
+    console.log(myLibrary);
     hideModal();
 }
 
@@ -62,6 +72,13 @@ form.addEventListener("submit", function(e){
     e.preventDefault();
     form.reset();
 });
+
+function createBookCard(){
+    cardDiv = document.createElement("div");
+    headerDiv = document.createElement("div");
+    statusDiv = document.createElement("div");
+    titleDiv = document.createElement("div");
+}
 
 
 //Modal variables.
@@ -83,3 +100,4 @@ function hideModal(){
 //Buttons for modal function.
 addBtn.addEventListener("click",displayModal);
 closeBtn.addEventListener("click",hideModal);
+
