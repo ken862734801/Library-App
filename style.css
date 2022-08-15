@@ -124,7 +124,7 @@ button:hover{
     font-weight:bold;
     margin-top:-8px;
 }
-.trash:hover, .trash:focus{
+.remove:hover, .remove:focus{
     cursor:pointer;
     color:rgb(68, 68, 68);
     transition: 0.3s;
