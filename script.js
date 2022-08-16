@@ -2,6 +2,30 @@
 const container = document.getElementById("container");
 const form = document.querySelector("form");
 
+//Input variables.
+const title = document.getElementById("bookTitle");
+const author = document.getElementById("bookAuthor");
+const pages = document.getElementById("bookPages");
+const checkbox = document.getElementById("bookStatus");
+
+//Check the read status.
+let isChecked;
+let readStatus;
+
+function getReadStatus(){
+    if(this.checked){
+        isChecked = true;
+        readStatus = "Read";
+        console.log("Read");
+    }else if(!this.checked){
+        isChecked = false;
+        readStatus = "Not Read";
+        console.log("Not Read");
+    }
+};
+
+checkbox.addEventListener("click", getReadStatus);
+
 //Library array.
 myLibrary = [];
 
@@ -27,35 +51,13 @@ const defaultBook3 = new Book(
     "S.E. Hinton", "192", "Read"
 )
 
+//Add example books to library. 
 function addDefaultBooksToLibrary(){
     myLibrary.push(defaultBook);
     myLibrary.push(defaultBook2);
     myLibrary.push(defaultBook3);
     console.log(myLibrary);
 }
-document.addEventListener("DOMContentLoaded", addDefaultBooksToLibrary);
-
-//Input variables.
-const title = document.getElementById("bookTitle");
-const author = document.getElementById("bookAuthor");
-const pages = document.getElementById("bookPages");
-const checkbox = document.getElementById("bookStatus");
-
-
-//Check the read status.
-let isChecked;
-let readStatus;
-
-function getReadStatus(){
-    if(this.checked){
-        isChecked = true;
-        readStatus = "Read";
-    }else if(!this.checked){
-        isChecked = false;
-        readStatus = "Not Read"
-    }
-};
-checkbox.addEventListener("click", getReadStatus);
 
 //Function to add new book from input. 
 function addNewBookToLibrary(){
@@ -65,21 +67,83 @@ function addNewBookToLibrary(){
     myLibrary.push(newBook);
     console.log(myLibrary);
     hideModal();
-}
+};
 
+//Function to create book cards.
+function createBooks(){
+
+    container.textContent="";
+
+    for(let i= 0; i < myLibrary.length; i++){
+
+    let cardDiv = document.createElement("div");
+    let headerDiv = document.createElement("div");
+    let span = document.createElement("span");
+    let statusDiv = document.createElement("div");
+    let titleDiv = document.createElement("div");
+    let authorDiv = document.createElement("div");
+    let pagesDiv = document.createElement("div");
+    let buttonDiv = document.createElement("div");
+    let label = document.createElement("label");
+    let p = document.createElement("p");
+    let checkbox2 = document.createElement("input");
+    let span2 = document.createElement("span");
+
+    cardDiv.className = "card";
+    headerDiv.className = "card-header";
+    span.className = "remove";
+    titleDiv.className = "card-title";
+    statusDiv.className = "card-status";
+    authorDiv.className = "card-author";
+    buttonDiv.className = "card-button";
+    label.className = "switch"
+    span2.className = "slider round";
+   
+    checkbox2.type = "checkbox";
+
+    container.appendChild(cardDiv);
+    cardDiv.appendChild(headerDiv);
+    headerDiv.appendChild(span);
+    cardDiv.appendChild(statusDiv);
+    cardDiv.appendChild(titleDiv);
+    cardDiv.appendChild(authorDiv);
+    cardDiv.appendChild(pagesDiv);
+    cardDiv.appendChild(buttonDiv);
+    buttonDiv.appendChild(p);
+    buttonDiv.appendChild(label);
+    label.appendChild(checkbox2);
+    label.appendChild(span2);
+
+    span.textContent = "\u00D7"
+    titleDiv.textContent = `${myLibrary[i].title}`;
+    authorDiv.textContent = `Written by ${myLibrary[i].author}`;
+    pagesDiv.textContent = `${myLibrary[i].pages} pages`;
+    p.textContent = "Read:"
+
+        if (myLibrary[i].read === "Read"){
+            statusDiv.classList.add("complete")
+            statusDiv.textContent = "Finished";
+            checkbox2.checked = true;
+        }else if (myLibrary[i].read === "Not Read"){
+            statusDiv.textContent = "Not Finished";
+            statusDiv.classList.add("not-complete")
+            checkbox2.checked = false;
+        }
+    };
+
+};
+
+//Form event listener. Adds information to array on form submit.
 form.addEventListener("submit", function(e){
     addNewBookToLibrary();
-    e.preventDefault();
+    createBooks();
     form.reset();
+    e.preventDefault();
 });
 
-function createBookCard(){
-    cardDiv = document.createElement("div");
-    headerDiv = document.createElement("div");
-    statusDiv = document.createElement("div");
-    titleDiv = document.createElement("div");
-}
-
+//Add information to array and create example cards on load.
+document.addEventListener("DOMContentLoaded", addDefaultBooksToLibrary);
+document.addEventListener("DOMContentLoaded", createBooks);
 
 //Modal variables.
 let modal = document.getElementById("modal");
@@ -100,4 +164,3 @@ function hideModal(){
 //Buttons for modal function.
 addBtn.addEventListener("click",displayModal);
 closeBtn.addEventListener("click",hideModal);
-
