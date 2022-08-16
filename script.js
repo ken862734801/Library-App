@@ -71,7 +71,7 @@ function addNewBookToLibrary(){
 
 //Function to create book cards.
 function createBooks(){
-
+  
     container.textContent="";
 
     for(let i= 0; i < myLibrary.length; i++){
