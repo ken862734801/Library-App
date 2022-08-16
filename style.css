@@ -340,7 +340,7 @@ input[type=submit]:hover{
         z-index:1;
     }
     .card{
-        width:275px;
+        width:290px;
         padding:14px;
     }
     .card-title, .card-author, .card-pages, .card-status{
