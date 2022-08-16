@@ -13,7 +13,7 @@ body{
     min-height:100vh;
 }
 header{
-    width:90%;
+    width:95%;
     margin:0 auto;
     padding:12px 0;
     color:var(--secondary-color);
@@ -21,7 +21,7 @@ header{
 
 .banner{
     display:flex;
-    width:90%;
+    width:95%;
     margin: 0 auto;
     border-radius:8px;
     background-color: var(--main-color);
@@ -68,7 +68,7 @@ button:hover{
     min-width:220px;
 }
 .section-title{
-    width:90%;
+    width:95%;
     margin: 0 auto;
     padding:16px 0;
     font-size:1.05em;
@@ -79,7 +79,7 @@ button:hover{
     flex-wrap: wrap;
     background-color: var(--main-color);
     border-radius:8px;
-    width:90%;
+    width:95%;
     height:auto;
     margin: 0 auto;
     justify-content: space-evenly;
