@@ -39,8 +39,8 @@ function Book(title, author, pages, read){
 
 //Example book information. 
 const defaultBook = new Book(
-    "Harry Potter and the Philosopher's Stone",
-    "J.K. Rowling", "223", "Read"
+    "Harry Potter and the Goblet of Fire",
+    "J.K. Rowling", "636", "Read"
 );
 const defaultBook2 = new Book(
     "Of Mice and Men",
@@ -90,8 +90,10 @@ function createBooks(){
     let span2 = document.createElement("span");
 
     cardDiv.className = "card";
+    cardDiv.id = `${myLibrary[i].title}`;
     headerDiv.className = "card-header";
     span.className = "remove";
+    span.id = "remove-"+[i];
     titleDiv.className = "card-title";
     statusDiv.className = "card-status";
     authorDiv.className = "card-author";
@@ -131,7 +133,41 @@ function createBooks(){
         }
     };
 
+    deleteBookCard();
 };
+
+function deleteBookCard(){
+    const remove = document.querySelectorAll(".remove");
+    console.log(remove.length);
+
+    for(i=0; i < remove.length; i++){
+        remove[i].addEventListener("click", function(e){
+            e.preventDefault();
+            let bookToDelete = e.target.closest("div.card")
+            bookToDelete.remove();
+            console.log(bookToDelete);
+
+            let bookId = bookToDelete.id;
+            console.log(bookId);
+
+            const bookItem = myLibrary.findIndex(item => item.title === bookId);
+            myLibrary.splice(bookItem, 1);
+
+            console.log(myLibrary.length);
+            console.log(myLibrary);
+
+            displayMessage();
+        });
+    }
+    
+};
+
+function displayMessage(){
+    if(myLibrary.length === 0){
+        container.textContent="Your bookshelf is currently empty."
+    }
+};
+
 
 //Form event listener. Adds information to array on form submit.
 form.addEventListener("submit", function(e){
