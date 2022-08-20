@@ -101,6 +101,7 @@ button:hover{
     background-color: white;
     box-shadow: 4px 4px 4px rgb(148, 122, 119);
     color:black;
+    font-size:.95em;
 }
 .card-status.complete{
     max-width:100px;
@@ -138,16 +139,16 @@ button:hover{
 }
 .card-title{
     font-weight: bold;
-    margin:8px 0;
+    margin:6px 0;
 }
 .card-author{
-    margin-bottom:8px;
+    margin-bottom:6px;
 }
 .card-pages{
-    margin-bottom:8px;
+    margin-bottom:6px;
 }
 .card-button{
-    margin-bottom:8px;
+    margin-bottom:6px;
     padding-right:15px;
     display:flex;
     justify-content: flex-end;
@@ -283,7 +284,17 @@ input[type=submit]:hover{
     cursor: pointer;
     background-color:#646eb1;
 }
-
+@media screen  and (max-width:1200px){
+    .text-container > h3{
+        font-size:1.40em;
+    }
+    .text-container > p {
+        font-size:1.0em;
+    }
+    .text-container > button{
+        font-size:0.90em;
+    }
+}
 @media screen and (max-width:600px){
     .text-container{
         min-width:180px;
@@ -305,7 +316,7 @@ input[type=submit]:hover{
         font-size: 1.20em;
     }
     .text-container > p{
-        font-size:0.93em;
+        font-size:0.92em;
     }
     .text-container > button{
         font-size:0.85em;
