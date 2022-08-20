@@ -5,7 +5,7 @@ https://ken862734801.github.io/Library-App/
 
 ## Preview
 <img src="images/LibraryApp.png">
-<img src="LibraryAppMobile.png" width="420" height="896">
+<img src="images/LibraryAppMobile.png" width="420" height="896">
 View on mobile.
 
 ## Summary
