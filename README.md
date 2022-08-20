@@ -25,9 +25,9 @@ For now I am happy with the state of the project. There are still small bugs tha
 
 ## Resources
 
-Like most of my projects stackoverflow and google were my best friends for this project. I had a hard time figuring out how to get the input data from the form, and use it in the DOM; however, template literals made that easier.
+Like most of my projects stackoverflow and google were my best friends for this project. I had a hard time figuring out how to get the input data from the form, and use it with the DOM; however, template literals made that easier.
 
-### ThisUI served as the template.
+### This UI served as the template.
 https://dribbble.com/shots/14240831-Booksy-Online-Book-Shop
 
 https://dribbble.com/shots/15328333-Reading
