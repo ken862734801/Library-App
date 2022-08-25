@@ -359,6 +359,9 @@ input[type=submit]:hover{
         z-index:1;
         font-size: 1em;
     }
+    .text-container > button{
+        font-size: 1em;
+    }
     .card{
         width:290px;
         padding:14px;
