@@ -357,6 +357,7 @@ input[type=submit]:hover{
         width:180px;
         margin-left:-25px;
         z-index:1;
+        font-size: 1em;
     }
     .card{
         width:290px;
