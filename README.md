@@ -15,7 +15,7 @@ The goal of this Odin Project assignment was to use utilize Javascript object co
 
 [Link to the assignment.](https://www.theodinproject.com/lessons/node-path-javascript-library)
 
-For now I am happy with the state of the project. There are still small bugs that I plan to fix in the future. I need to make the identification process of matching an item in the array more strict. Right now the code checks to see if the bookcard id is the same as the array elements title; however; if the user uploads two books with the same title errors occur. I think it's probably a simple fix but we'll see when I come back to it. 
+For now I am happy with the state of the project. There are still small bugs that I plan to fix in the future. I need to make the identification process of matching an item in the array stricter. Right now the code checks to see if the bookcard id is the same as the array elements title; however; if the user uploads two books with the same title errors occur. I think it's probably a simple fix but we'll see when I come back to it. 
 
 ### Features
 - User can upload book to library.
