@@ -10,7 +10,7 @@ View on mobile.
 
 ## Summary
 
-The goal of this Odin Project assignment was to use utilize Javascript object constructors and user input data in order to create a simple library app.
+The goal of this Odin Project assignment was to utilize Javascript object constructors and user input data in order to create a simple library app.
 
 
 [Link to the assignment.](https://www.theodinproject.com/lessons/node-path-javascript-library)
